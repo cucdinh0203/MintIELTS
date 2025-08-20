@@ -1,13 +1,9 @@
-table, th, td {
-	border: 1px solid black;
-  	border-collapse: collapse;
+body {
+  background-color: powderblue;
 }
-th, td {
-  	padding: 10px;
+h1 {
+  color: blue;
 }
-th {
-  	background-color: #FDDF95;
-}
-colgroup {
-  	width: 250px;
+p {
+  color: red;
 }
