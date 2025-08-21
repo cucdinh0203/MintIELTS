@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Learning Platform</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -14,20 +14,24 @@
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">
-                <img src="logo.png" alt="Website Logo" />
+                <img src="images/logo.png" alt="Website Logo" />
             </a>
         </div>
         <div class="nav-right">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
-                <li><a href="#">Reading</a></li>
+                <li><a href="reading.html">Reading</a></li>
                 <li><a href="#">Writing</a></li>
                 <li><a href="#">Listening</a></li>
                 <li><a href="#">Speaking</a></li>
             </ul>
-            <div class="avatar">
-                <img src="logo.png" alt="User Avatar" />
+            <div class="avatar-dropdown">
+                <img src="images/logo.png" alt="User Avatar" class="avatar-img" />
+                <div class="dropdown-menu">
+                    <a href="settings.html">Settings (UPCOMING)</a>
+                    <a href="login.html">Sign Out (UPCOMING)</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -66,9 +70,13 @@
             </div>
         </div>
     </section>
+    <script>
+        // Load avatar from localStorage
+        const avatar = localStorage.getItem("profileAvatar") || "images/non.png";
+        document.getElementById("nav-avatar").src = avatar;
+    </script>
 
-    <script src="index.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>
-
